@@ -128,3 +128,43 @@ function vaciarCarrito () {
     }
     return false;
 }
+
+function mostrarAlerta() {
+    var overlay = document.getElementById('overlay');
+    var alertBox = document.getElementById('alertBox');
+    overlay.style.display = 'block';
+    alertBox.style.display = 'block';
+    document.getElementById('alertContent').innerHTML = 'Producto agregado al carrito correctamente';
+  }
+    
+
+
+
+    
+  
+  function cerrarAlerta() {
+    var overlay = document.getElementById('overlay');
+    var alertBox = document.getElementById('alertBox');
+    overlay.style.display = 'none';
+    alertBox.style.display = 'none';
+    
+  }
+  
+
+
+//typewritter
+
+
+const app = document.getElementById ('typewriter')
+;
+const typewriter = new Typewriter(app, {
+    loop : true,
+    delay:60
+
+});
+
+typewriter
+.typeString("¡¡Bienvenido!!")
+.pauseFor (200)
+.start();
+
