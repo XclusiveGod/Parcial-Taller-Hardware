@@ -494,6 +494,19 @@ margin-left: 43%;
    
     
 }
+
+.producto-1 img {
+
+    margin-bottom: 15px;
+    width: 900px;
+    margin-right: 5%;
+    margin-left:0%;
+    border-radius: 20px;
+}
+
+/* CODIGO EN PANTALLAS MEDIANAS  */
+
+
 @media(max-width:991px) {
 
     .menu {
@@ -725,10 +738,15 @@ margin-left: 43%;
         
         margin-left: 28%;
       }
-}
 
+}
+/* FIN CODIGO EN PANTALLAS MEDIANAS  */
+
+/* CODIGO EN PANTALLAS PEQUEÑAS  */
 @media(max-width:700px) {
 
+
+ 
     .bienvenidos {
 
         color: aliceblue;
@@ -765,7 +783,9 @@ margin-left: 43%;
       }
    
 }
+/* FIN CODIGO EN PANTALLAS PEQUEÑAS  */
 
+/* Fondo de la seccion de promociones  */
 
 .promo-1 {
 
@@ -809,9 +829,9 @@ margin-left: 43%;
     border: 5px solid #fff;
 }
 
+/* FIN Fondo de la seccion de promociones  */
 
-
-
+/* Alertas del carrrito exitoso */
 
   @keyframes Pulse {
     0% { transform: scale(1); }
@@ -859,3 +879,83 @@ margin-left: 43%;
   #alertBox.fadeOut {
     animation: fadeOut 0.1s forwards;
   }
+
+
+/* FIN Alertas del carrrito exitoso */
+
+
+
+
+
+
+   .producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 35%;
+   margin-left: 35%;
+    color:white;
+}
+
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .button:hover {
+    box-shadow: .5px .5px 150px #252525;
+  }
+  
+  .type1::after {
+    content: "Gracias ツ";
+    height: 50px;
+    width: 150px;
+    background-color: #ff5e00;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1::before {
+    content: "Comprar ";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #ff5e00;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }
+
+  

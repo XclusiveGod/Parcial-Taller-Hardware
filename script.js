@@ -6,12 +6,16 @@ var swiper = new Swiper(".mySwiper-1", {
     spaceBetween: 30,
     loop: true,
     pagination: {
-        el:".swiper-pagination",
+        el: ".swiper-pagination",
         clickable: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+    },
+    autoplay: {
+        delay: 1000, 
+        disableOnInteraction: false,
     }
 });
 
@@ -48,22 +52,22 @@ const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventListeners();
-function cargarEventListeners () {
-    elementos1.addEventListener('click',comprarElemento);
-    elementos2.addEventListener('click',comprarElemento);
-    elementos3.addEventListener('click',comprarElemento);
-    carrito.addEventListener('click',eliminarElemento);
+function cargarEventListeners() {
+    elementos1.addEventListener('click', comprarElemento);
+    elementos2.addEventListener('click', comprarElemento);
+    elementos3.addEventListener('click', comprarElemento);
+    carrito.addEventListener('click', eliminarElemento);
 
-    vaciarCarritoBtn.addEventListener('click',vaciarCarrito);
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
 
-function comprarElemento (e) {
+function comprarElemento(e) {
 
-    e.preventDefault ();
-    if(e.target.classList.contains('agregar-carrito')) {
-const elemento = e.target.parentElement.parentElement;
-leerDatosElemento(elemento);
+    e.preventDefault();
+    if (e.target.classList.contains('agregar-carrito')) {
+        const elemento = e.target.parentElement.parentElement;
+        leerDatosElemento(elemento);
 
     }
 }
@@ -84,7 +88,7 @@ function leerDatosElemento(elemento) {
 function insertarCarrito(elemento) {
 
     const row = document.createElement('tr');
-    row.innerHTML =   `
+    row.innerHTML = `
     <td>
     <img src = "${elemento.imagen}" width =70>
     </td>
@@ -107,13 +111,13 @@ function insertarCarrito(elemento) {
 }
 
 
-function eliminarElemento (e) {
+function eliminarElemento(e) {
 
-    e.preventDefault ();
+    e.preventDefault();
     let elemento,
-    elementoId;
+        elementoId;
 
-    if(e.target.classList.contains('borrar')) {
+    if (e.target.classList.contains('borrar')) {
 
         e.target.parentElement.parentElement.remove();
         elemento = e.target.parentElement.parentElement;
@@ -121,9 +125,9 @@ function eliminarElemento (e) {
     }
 }
 
-function vaciarCarrito () {
+function vaciarCarrito() {
 
-    while(lista.firstChild){
+    while (lista.firstChild) {
         lista.removeChild(lista.firstChild);
     }
     return false;
@@ -135,36 +139,97 @@ function mostrarAlerta() {
     overlay.style.display = 'block';
     alertBox.style.display = 'block';
     document.getElementById('alertContent').innerHTML = 'Producto agregado al carrito correctamente';
-  }
-    
+}
 
 
 
-    
-  
-  function cerrarAlerta() {
+
+
+
+function cerrarAlerta() {
     var overlay = document.getElementById('overlay');
     var alertBox = document.getElementById('alertBox');
     overlay.style.display = 'none';
     alertBox.style.display = 'none';
-    
-  }
-  
+
+}
+
 
 
 //typewritter
 
 
-const app = document.getElementById ('typewriter')
-;
-const typewriter = new Typewriter(app, {
-    loop : true,
-    delay:60
 
+const app = document.getElementById('typewriter');
+
+
+const typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 50
 });
 
 typewriter
-.typeString("¡¡Bienvenido!!")
-.pauseFor (200)
-.start();
+    .typeString("¡¡BIENVENIDO!!")
+    .pauseFor(100)
+    .start();
 
+
+
+
+function calcular(operacion) {
+    const numero1 = parseFloat(document.getElementById('numero1').value);
+    const numero2 = parseFloat(document.getElementById('numero2').value);
+    let resultado;
+
+    switch (operacion) {
+        case 'sumar':
+            resultado = numero1 + numero2;
+            break;
+        case 'restar':
+            resultado = numero1 - numero2;
+            break;
+        case 'multiplicar':
+            resultado = numero1 * numero2;
+            break;
+        case 'dividir':
+            resultado = numero1 / numero2;
+            break;
+
+        case 'elevado':
+
+            resultado = Math.pow(numero1, numero2);
+
+            break;
+
+            case 'factorial':
+                resultado = 1; // Inicializar resultado con 1
+                for (let i = 1; i <= numero1; i++) {
+                    resultado *= i;
+                }
+        
+            break;
+
+
+        default:
+            resultado = 'Operación no válida';
+
+
+           
+
+
+
+    }
+       
+    document.getElementById('resultado').textContent = `El resultado es: ${resultado}`;
+}
+
+
+
+let docTile = document.tittle;
+
+window.addEventListener("blur",() => {
+    document.title = "Vuelve ☹ "
+})
+window.addEventListener("focus", () => {
+    document.title = "Pagina principal";
+})
