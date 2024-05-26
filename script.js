@@ -14,7 +14,7 @@ var swiper = new Swiper(".mySwiper-1", {
         prevEl: ".swiper-button-prev"
     },
     autoplay: {
-        delay: 1000, 
+        delay: 7000,
         disableOnInteraction: false,
     }
 });
@@ -133,6 +133,12 @@ function vaciarCarrito() {
     return false;
 }
 
+
+
+//Fin de carrrito
+
+//alerta de agregado al carrito
+
 function mostrarAlerta() {
     var overlay = document.getElementById('overlay');
     var alertBox = document.getElementById('alertBox');
@@ -142,9 +148,9 @@ function mostrarAlerta() {
 }
 
 
+//FIN alerta de agregado al carrito
 
-
-
+//alerta de agregado al carrito CERRAR
 
 function cerrarAlerta() {
     var overlay = document.getElementById('overlay');
@@ -154,7 +160,7 @@ function cerrarAlerta() {
 
 }
 
-
+//FIN alerta de agregado al carrito CERRAR
 
 //typewritter
 
@@ -173,61 +179,15 @@ typewriter
     .pauseFor(100)
     .start();
 
+//fIN TYPEWRITER
 
 
 
-function calcular(operacion) {
-    const numero1 = parseFloat(document.getElementById('numero1').value);
-    const numero2 = parseFloat(document.getElementById('numero2').value);
-    let resultado;
-
-    switch (operacion) {
-        case 'sumar':
-            resultado = numero1 + numero2;
-            break;
-        case 'restar':
-            resultado = numero1 - numero2;
-            break;
-        case 'multiplicar':
-            resultado = numero1 * numero2;
-            break;
-        case 'dividir':
-            resultado = numero1 / numero2;
-            break;
-
-        case 'elevado':
-
-            resultado = Math.pow(numero1, numero2);
-
-            break;
-
-            case 'factorial':
-                resultado = 1; // Inicializar resultado con 1
-                for (let i = 1; i <= numero1; i++) {
-                    resultado *= i;
-                }
-        
-            break;
-
-
-        default:
-            resultado = 'Operación no válida';
-
-
-           
-
-
-
-    }
-       
-    document.getElementById('resultado').textContent = `El resultado es: ${resultado}`;
-}
-
-
+//Cambia el titulo de la pagina cuando sale
 
 let docTile = document.tittle;
 
-window.addEventListener("blur",() => {
+window.addEventListener("blur", () => {
     document.title = "Vuelve ☹ "
 })
 window.addEventListener("focus", () => {
