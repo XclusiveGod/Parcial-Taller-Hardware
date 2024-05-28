@@ -39,6 +39,10 @@ var swiper = new Swiper(".mySwiper-2", {
         950: {
             slidesPerView: 3
         }
+    },
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
     }
 });
 
@@ -150,6 +154,18 @@ function mostrarAlerta() {
 
 //FIN alerta de agregado al carrito
 
+//alerta email enviado
+
+function mostrarAlertaEmail() {
+    var overlay = document.getElementById('overlay');
+    var alertBox = document.getElementById('alertBox');
+    overlay.style.display = 'block';
+    alertBox.style.display = 'block';
+    document.getElementById('alertContent').innerHTML = 'Correo enviado exitosamente, te responderemos dentro de las proximas 24 horas';
+}
+
+
+//fin alerta email enviado
 //alerta de agregado al carrito CERRAR
 
 function cerrarAlerta() {

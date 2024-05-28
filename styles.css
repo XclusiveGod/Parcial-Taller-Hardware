@@ -27,11 +27,17 @@ a {
 
 .container {
 
-    max-width: 80%;
+    max-width: 60%;
     margin: auto;
 
 }
 
+.container3 {
+
+    max-width: 85%;
+    margin: auto;
+
+}
 
 .header {
 
@@ -49,12 +55,13 @@ a {
     padding: 0 80px 50px 80px;
     display: flex;
     height: auto;
-  
+  width: 15%;
     justify-content: center;
     align-items: center;
     background-color: #00000028;
-    border-radius: 70px;
-    border: 2px solid #707070;
+   border-radius: 20px;
+
+    border: 2px solid #ffffff;
     
 
 }
@@ -110,7 +117,7 @@ a {
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    background-color: rgba(21, 20, 20, 0.4);
+    background-color: rgba(21, 20, 20, 0.753);
     border-radius: 30px;
 }
 
@@ -144,7 +151,8 @@ a {
 .menu .navbar ul li a:hover {
 
 
-    color: #ff4800;
+    color: #00eeff;
+    background: none;
 
 
 }
@@ -212,7 +220,8 @@ td {
 
 .borrar {
 
-    background-color: #ff6000;
+    background-color: #ff0000;
+    border: white 1px solid;
     border-radius: 50%;
     padding: 5px 10px;
     text-decoration: none;
@@ -740,7 +749,7 @@ hr {
     #alertBox {
         position: fixed;
         top: 40%;
-        margin-left: 10%;
+        margin: auto;
         align-items: center;
         text-align: center;
         transform: translate(-50%, -50%);
@@ -917,8 +926,8 @@ hr {
     align-items: center;
     text-align: center;
     transform: translate(-50%, -50%);
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(170, 170, 170), rgb(109, 92, 92));
-    border: 2px #f5f5f5 solid;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255),rgb(255, 255, 255));
+    border: 2px #00f7ff solid;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -931,7 +940,7 @@ hr {
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
-
+    color: rgb(0, 0, 0);
 
 }
 
@@ -970,7 +979,7 @@ hr {
     content: "Gracias ツ";
     height: 50px;
     width: 150px;
-    background-color: #ff5e00;
+    background-color: #033e96;
     color: #fff;
     position: absolute;
     top: 0%;
@@ -989,7 +998,7 @@ hr {
     height: 50px;
     width: 150px;
     background-color: #fff;
-    color: #ff5e00;
+    color: #025eaa;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -1136,7 +1145,7 @@ hr {
 
     height: 40px;
     
-    background: linear-gradient(120deg, #a75000, #fd771d, #703c00);
+    background: linear-gradient(120deg, #01327a, #006eff, #003c96);
     border: none;
     border-radius: 50px;
     color: rgb(255, 255, 255);
@@ -1146,7 +1155,7 @@ hr {
     justify-content: center;
     gap: 5px;
     cursor: pointer;
-    box-shadow: 1px 3px 0px rgb(105, 0, 0);
+    box-shadow: 1px 3px 0px rgb(0, 89, 255);
     transition-duration: .3s;
 }
 
@@ -1181,7 +1190,7 @@ hr {
 
     display: flex;
     align-items: center;
-    background-image: linear-gradient(rgb(185, 0, 0), rgb(221, 125, 0));
+    background-image: linear-gradient(rgb(0, 74, 134), rgb(0, 85, 119));
     color: #f5f5f5;
 }
 
@@ -1223,11 +1232,12 @@ hr {
 
 
 .button11 {
+    margin-top: auto;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: rgb(20, 20, 20);
-    border: none;
+    border: white 1px solid;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -1289,7 +1299,7 @@ hr {
     display: flex;
     justify-content: center; /* Centra las imágenes horizontalmente */
     align-items: center;
-    gap: 20px; /* Espacio entre las imágenes */
+    gap: 40px; /* Espacio entre las imágenes */
 }
 
 .item {
@@ -1367,7 +1377,8 @@ hr {
 
 .servicio-tec button {
 margin-top: 80px;
-    margin-left: 160px;
+    margin-left: 140px;
+    margin-right: 100px;
     --border-radius: 15px;
     --border-width: 4px;
     appearance: none;
@@ -1434,3 +1445,333 @@ margin-top: 80px;
     --border-width: 5px;
    }
 
+
+
+  /* Estilos base del botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1000;
+}
+
+/* Estilos de la imagen del botón */
+.whatsapp-button img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos cuando se pasa el ratón por encima */
+.whatsapp-button img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* Estilos para asegurar el contenido centrado y con buen aspecto */
+.whatsapp-button img,
+.whatsapp-button::before {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* Ajuste de tamaño del contenedor */
+.whatsapp-button {
+    padding: 10px;
+}
+
+
+.promos {
+
+
+
+    .button {
+        height: 50px;
+        width: 150px;
+        border: rgb(255, 0, 242) 1px solid;
+margin-bottom: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        background: none;
+    
+    }
+    
+    .button:hover {
+        box-shadow: .5px .5px 150px #252525;
+    }
+    
+    .type1::after {
+        content: "Gracias ツ";
+        height: 50px;
+        width: 150px;
+        background-color: rgb(255, 0, 242);
+        color: #fff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(50px);
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .type1::before {
+        
+        content: "Comprar ";
+        height: 50px;
+        width: 150px;
+        background-color: #00000000;
+        color: #ffffff;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transform: translateY(0px) scale(1.2);
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .type1:hover::after {
+        transform: translateY(0) scale(1.2);
+    }
+    
+    .type1:hover::before {
+        transform: translateY(-50px) scale(0) rotate(120deg);
+    }
+    
+
+
+}
+
+
+
+
+
+.servicio-tec2 button {
+    
+ margin-top:-15% ;
+        --border-radius: 15px;
+        --border-width: 4px;
+        appearance: none;
+        position: relative;
+        padding: 1em 2em;
+        border: 0;
+        background-color: #212121;
+        font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        z-index: 2;
+       }
+       
+       .servicio-tec2 button::after {
+        --m-i: linear-gradient(#000, #000);
+        --m-o: content-box, padding-box;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: var(--border-width);
+        border-radius: var(--border-radius);
+        background-image: conic-gradient(
+               #488cfb,
+               #29dbbc,
+               #05bdf5,
+               #ff9f0e,
+               #e440bb,
+               #655adc,
+               #488cfb
+           );
+        -webkit-mask-image: var(--m-i), var(--m-i);
+        mask-image: var(--m-i), var(--m-i);
+        -webkit-mask-origin: var(--m-o);
+        mask-origin: var(--m-o);
+        mask-clip:var(--m-o) ;
+        -webkit-mask-clip: var(--m-o);
+        mask-composite: exclude;
+        -webkit-mask-composite: destination-out;
+        filter: hue-rotate(0);
+        animation: rotate-hue linear 500ms infinite;
+        animation-play-state: paused;
+       }
+       
+       .servicio-tec2 button:hover::after {
+        animation-play-state: running;
+       }
+       
+       @keyframes rotate-hue {
+        to {
+         filter: hue-rotate(1turn);
+        }
+       }
+       
+       .servicio-tec2 button,
+       .servicio-tec2 button::after {
+        box-sizing: border-box;
+       }
+       
+       .servicio-tec2 button:active {
+        --border-width: 5px;
+       }
+
+
+       .container2 {
+
+        max-width: 80%;
+        
+        margin: auto;
+        
+   
+        
+    }
+    .contact-form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1; /* Permite que el formulario se expanda */
+    }
+    
+    .contact-form label {
+        color: black;
+    }
+    
+    .contact-form .heading {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 12px;
+        font-weight: bold;
+        display: block;
+    }
+    
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-form label {
+        margin-bottom: 10px;
+    }
+    
+    textarea {
+        resize: none;
+        height: 80px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form input:focus, .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px #ff6384;
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .contact-form button {
+        background-color: #ff6384;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: auto;
+    }
+    
+    .contact-form button {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .formulario {
+        display: flex; /* Usar flexbox */
+        align-items: center; /* Alinear verticalmente al centro */
+        max-width: 30%; /* Ajustar para hacerlo más ancho */
+        margin: auto;
+        margin-right: auto;
+        padding: 20px; /* Opcional: Añadir relleno */
+    }
+    
+    .titulo {
+        color: #f5f5f5;
+        margin-left: 36.5%; /* Espacio entre el formulario y el texto */
+        flex-shrink: 0; /* Evitar que el texto se reduzca */
+        font-size: 40px;
+    }
+    
+
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.712);
+        display: none;
+        z-index: 100;
+
+    }
+
+    #alertBox {
+        position: fixed;
+        top: 40%;
+       margin: auto;
+        align-items: center;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+        animation: Pulse 1.5s infinite;
+        z-index: 101;
+    }
+
+
+    #alertContent {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        
+    }
+
+
+
+    #alertBox1 {
+        position: fixed;
+        top: 40%;
+       margin: auto;
+        align-items: center;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+        animation: Pulse 1.5s infinite;
+        z-index: 101;
+    }
