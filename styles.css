@@ -994,7 +994,7 @@ hr {
 }
 
 .type1::before {
-    content: "Comprar ";
+    content: "Añadir al carrito";
     height: 50px;
     width: 150px;
     background-color: #fff;
@@ -1003,7 +1003,7 @@ hr {
     top: 0%;
     left: 0%;
     transform: translateY(0px) scale(1.2);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -1526,7 +1526,7 @@ margin-bottom: none;
     
     .type1::before {
         
-        content: "Comprar ";
+        content: "Añadir al carrito";
         height: 50px;
         width: 150px;
         background-color: #00000000;
@@ -1535,7 +1535,7 @@ margin-bottom: none;
         top: 0%;
         left: 0%;
         transform: translateY(0px) scale(1.2);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -1714,9 +1714,10 @@ margin-bottom: none;
     
     .titulo {
         color: #f5f5f5;
-        margin-left: 36.5%; /* Espacio entre el formulario y el texto */
+        margin-left: 1%; /* Espacio entre el formulario y el texto */
         flex-shrink: 0; /* Evitar que el texto se reduzca */
-        font-size: 40px;
+        font-size: 20px;
+        text-align: center;
     }
     
 
@@ -1774,4 +1775,41 @@ margin-bottom: none;
         display: none;
         animation: Pulse 1.5s infinite;
         z-index: 101;
+    }
+
+
+    .ubicacion {
+
+display: flex;
+color: white;
+    }
+
+
+    .ubicacion img {
+
+margin-left: 10%;   
+border: #000 3px solid;
+
+    }
+
+    .ubicacion P {
+font-size: 20px;
+margin-top: 10%;
+
+    }
+
+    .ubicacion-tittle {
+
+margin-left: 30%;
+color: white;
+        
+    }
+
+
+    .contenedor-titulo {
+
+
+max-width: 70%;
+margin: auto;
+
     }
