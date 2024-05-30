@@ -157,13 +157,20 @@ function mostrarAlerta() {
 //alerta email enviado
 
 function mostrarAlertaEmail() {
-    var overlay = document.getElementById('overlay');
-    var alertBox = document.getElementById('alertBox');
+    var overlay = document.getElementById('overlayEmail');
+    var alertBox = document.getElementById('alertBoxEmail');
     overlay.style.display = 'block';
     alertBox.style.display = 'block';
-    document.getElementById('alertContent').innerHTML = 'Correo enviado exitosamente, te responderemos dentro de las proximas 24 horas';
+    document.getElementById('alertContentEmail').innerHTML = 'Correo enviado exitosamente, te responderemos dentro de las proximas 24 horas';
 }
 
+function cerrarAlertaEmail() {
+    var overlay = document.getElementById('overlayEmail');
+    var alertBox = document.getElementById('alertBoxEmail');
+    overlay.style.display = 'none';
+    alertBox.style.display = 'none';
+
+}
 
 //fin alerta email enviado
 //alerta de agregado al carrito CERRAR

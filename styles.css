@@ -1760,24 +1760,6 @@ margin-bottom: none;
     }
 
 
-
-    #alertBox1 {
-        position: fixed;
-        top: 40%;
-       margin: auto;
-        align-items: center;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        display: none;
-        animation: Pulse 1.5s infinite;
-        z-index: 101;
-    }
-
-
     .ubicacion {
 
 display: flex;
@@ -1812,4 +1794,55 @@ color: white;
 max-width: 70%;
 margin: auto;
 
+    }
+
+
+    
+    #overlayEmail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.712);
+        display: none;
+        z-index: 100;
+
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+      
+      #alertBoxEmail {
+        position: fixed;
+        top: 40%;
+        margin-left: 23%;
+        align-items: center;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+        animation: bounce 1s infinite;
+        z-index: 101;
+      }
+      
+
+    #alertContentEmail {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        
     }
